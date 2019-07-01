@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CadastroDeClientes:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>CadastroDeClientes</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="apiweb-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="CadastroDeClientes:war exploded" />
+    </root>
+  </artifact>
+</component>

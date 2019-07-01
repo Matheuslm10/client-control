@@ -23,7 +23,6 @@ public class ClienteController {
 
 	// Negocios
 	private Cliente cadastrar(Cliente cliente) {
-
 		
 		cliente.setId(proximoId);
 		// criar Id
@@ -32,7 +31,6 @@ public class ClienteController {
 		clientes.put(cliente.getId(), cliente);
 
 		return cliente;
-
 	}
 
 	private Collection<Cliente> buscarTodos() {
