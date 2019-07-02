@@ -12,6 +12,7 @@ function novoContato(){
     labelContato.innerText="Contato:";
 
     var inputContato = document.createElement("input");
+    inputContato.setAttribute("name", "txtContato")
     var btnExc = document.createElement("input");
     btnExc.setAttribute("type", "button");
     btnExc.setAttribute("value", "-");
@@ -30,4 +31,16 @@ function novoContato(){
     divLinha.appendChild(br);
 
     elListaContatos.appendChild(divLinha);
+}
+
+function imprimirDados(){
+    var arrInputsContatos = document.frmContatos.txtContato;
+    var saidaContatos = document.getElementById("saidaContatos");
+    var saida ="";
+
+    for (i=0; i<arrInputsContatos.length; i++){
+        saida += arrInputsContatos[i].value + "<br>";
+    }
+
+    saidaContatos.innerHTML = saida;
 }
