@@ -16,7 +16,7 @@ appCliente.controller("indexController", function($scope, $http){
                 console.log(response.status)
             }
         );
-    }
+    };
 
     $scope.salvarClientes= function (){
         $http({method:"POST", url:"http://localhost:8080/clientes", data: $scope.cliente}).then(
@@ -28,7 +28,7 @@ appCliente.controller("indexController", function($scope, $http){
                 console.log(response.status)
             }
         );
-    }
+    };
 
     $scope.excluirCliente= function (cliente){
         $http({method:"DELETE", url:"http://localhost:8080/clientes/"+cliente.id}).then(
@@ -41,10 +41,12 @@ appCliente.controller("indexController", function($scope, $http){
                 console.log(response.status)
             }
         );
-    }
+    };
+
+    $scope.alterarCliente= function (cliente){
+        $scope.cliente = angular
+    };
 
     $scope.carregarClientes();
-
-
 
 });
