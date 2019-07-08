@@ -23,6 +23,7 @@ public class ClienteController {
 	ClienteService clienteService;
 	
 	// End points
+	@CrossOrigin(origins = "*")
 	@RequestMapping(method = RequestMethod.POST, value = "/clientes", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Cliente> cadastrarCliente(@RequestBody Cliente cliente) {
 
