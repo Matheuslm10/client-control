@@ -48,7 +48,6 @@
   </v-container>
 </template>
 <script>
-import Vue from "vue";
 import axios from "axios";
 
 export default {
@@ -93,7 +92,6 @@ export default {
       this.buscarTodos();
     },
     async deletar(index) {
-      console.log("entrou em deletar");
       await axios.delete("http://localhost:8080/clientes/" + index);
       this.buscarTodos();
     },
@@ -126,7 +124,6 @@ export default {
         Object.assign(this.clientes[this.editedIndex], this.editedItem);
         this.alterar();
       } else {
-        console.log("entrou no else");
         this.clientes.push(this.editedItem);
         this.salvar();
       }
