@@ -1,3 +1,10 @@
+.classpath
+.mvn/
+.project
+.settings/
+target/
+bin/
+
 .DS_Store
 node_modules
 /dist
