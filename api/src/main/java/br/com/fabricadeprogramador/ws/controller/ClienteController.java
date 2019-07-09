@@ -39,7 +39,8 @@ public class ClienteController {
 
 		return new ResponseEntity<>(clientesBuscados, HttpStatus.OK);
 	}
-	
+
+	@CrossOrigin(origins = "*")
 	@RequestMapping(method = RequestMethod.DELETE, value = "/clientes/{id}" )
 	public ResponseEntity<Cliente> excluirCliente(@PathVariable Integer id) {
 		
@@ -51,7 +52,8 @@ public class ClienteController {
 		clienteService.excluir(clienteEncontrado);
 		return new ResponseEntity<>( HttpStatus.OK);
 	}
-	
+
+	@CrossOrigin(origins = "*")
 	@RequestMapping(method = RequestMethod.PUT, value = "/clientes", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Cliente> alterarCliente(@RequestBody Cliente cliente) {
 
