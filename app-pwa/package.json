@@ -8,6 +8,21 @@
     "lint": "vue-cli-service lint",
     "test": "jest"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
