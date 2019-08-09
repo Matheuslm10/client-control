@@ -25,6 +25,7 @@
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "jest": "^24.8.0",
@@ -43,7 +44,7 @@
     ],
     "transform": {
       ".*\\.(vue)$": "vue-jest",
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+      "^.+\\.jsx?$": "babel-jest"
     }
   },
   "eslintConfig": {
